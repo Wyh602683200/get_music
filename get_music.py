@@ -7,7 +7,7 @@ from common.log import logger
 
 BASE_URL_DM = "https://api.qqsuu.cn/api/dm-lsdd" #https://api.qqsuu.cn/
 
-@plugins.register(name="caipu",
+@plugins.register(name="get_music",
                   desc="搜歌曲",
                   version="1.0",
                   author="wyh",
@@ -25,7 +25,7 @@ class get_music(Plugin):
         logger.info(f"[{__class__.__name__}] inited")
 
     def get_help_text(self, **kwargs):
-        help_text = f"发送【搜歌曲 菜名/食材】 获取 菜名/食材相关菜谱"
+        help_text = f"发送【搜歌曲】 获取歌曲链接"
         return help_text
 
     def on_handle_context(self, e_context: EventContext):
