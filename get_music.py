@@ -5,7 +5,7 @@ from bridge.context import ContextType
 from bridge.reply import Reply, ReplyType
 from common.log import logger
 
-BASE_URL_DM = "https://api.qqsuu.cn/api/dm-lsdd" #https://api.qqsuu.cn/
+BASE_URL_DM = "https://api.linhun.vip/api/qqyy?name=周杰伦&y=1&n=1&apiKey=72188823153-0203570171c-7f48b38111d" #https://api.qqsuu.cn/
 
 @plugins.register(name="get_music",
                   desc="搜歌曲",
@@ -52,7 +52,7 @@ class get_music(Plugin):
 
     def get_music(self):
         url = BASE_URL_DM
-        params = {"n":1, "name":self.content.replace(" ", "")[3:]}            
+        params = {"name":self.content.replace(" ", "")[3:]}            
         headers = {'Content-Type': "application/x-www-form-urlencoded"}
         try:
             # 主接口
